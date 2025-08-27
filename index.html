@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RAMESH MOBILES</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">RAMESH <span>MOBILES</span></div>
+
+    <div class="search-area">
+      <input id="searchBar" placeholder="Search mobiles, e.g. 'iPhone' or 'Galaxy'" />
+    </div>
+
+    <div class="header-actions">
+      <select id="sortSelect" title="Sort">
+        <option value="default">Sort: Default</option>
+        <option value="price-asc">Price: Low → High</option>
+        <option value="price-desc">Price: High → Low</option>
+        <option value="name-asc">Name A → Z</option>
+      </select>
+
+      <a id="ordersLink" href="orders.html">Orders</a>
+      <a id="authLink" href="auth.html">Login / Sign up</a>
+      <a id="cartLink" href="cart.html">Cart (<span id="cartCount">0</span>)</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Best Deals • Fast Delivery • Secure Checkout</h1>
+      <p>Dark-theme demo — 50 real-style phones with search, infinite scroll, cart & orders.</p>
+    </section>
+
+    <section id="productGrid" class="product-grid"></section>
+
+    <div id="loadMoreWrap" class="load-more-wrap">
+      <button id="loadMoreBtn" class="btn load-more">Load more</button>
+      <div id="loading" class="loading" style="display:none">Loading...</div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    © 2025 RAMESH MOBILES — Demo store
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      updateCartCountUI();
+      initIndexPage();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login / Sign up - RAMESH MOBILES</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">RAMESH <span>MOBILES</span></div>
+  </header>
+
+  <main class="auth-main">
+    <div class="auth-card">
+      <h2>Login</h2>
+      <input id="loginEmail" placeholder="Email" />
+      <input id="loginPassword" placeholder="Password" type="password" />
+      <button id="loginBtn" class="btn view-btn">Login</button>
+      <p id="loginMsg" class="muted"></p>
+    </div>
+
+    <div class="auth-card">
+      <h2>Sign up</h2>
+      <input id="signupName" placeholder="Full name" />
+      <input id="signupEmail" placeholder="Email" />
+      <input id="signupPassword" placeholder="Password" type="password" />
+      <button id="signupBtn" class="btn buy-btn">Create account</button>
+      <p id="signupMsg" class="muted"></p>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      updateCartCountUI();
+      document.getElementById('signupBtn').addEventListener('click', signup);
+      document.getElementById('loginBtn').addEventListener('click', login);
+    });
+  </script>
+</body>
+</html>

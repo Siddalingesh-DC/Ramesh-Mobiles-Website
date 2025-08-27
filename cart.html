@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cart - RAMESH MOBILES</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">RAMESH <span>MOBILES</span></div>
+    <div class="header-actions">
+      <a href="index.html">Home</a>
+      <a id="authLinkCart" href="auth.html">Login / Sign up</a>
+    </div>
+  </header>
+
+  <main class="cart-main">
+    <h2>Your Cart</h2>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-summary">
+      <div>Total: ₹<span id="cartTotal">0</span></div>
+      <button id="checkoutBtn" class="checkout-btn">Proceed to Checkout</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      updateCartCountUI();
+      renderCartPage();
+      document.getElementById('checkoutBtn').addEventListener('click', tryCheckout);
+    });
+  </script>
+</body>
+</html>

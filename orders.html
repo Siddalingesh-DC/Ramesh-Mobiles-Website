@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Order History - RAMESH MOBILES</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">RAMESH <span>MOBILES</span></div>
+    <div class="header-actions">
+      <a href="index.html">Home</a>
+      <a href="cart.html">Cart</a>
+    </div>
+  </header>
+
+  <main class="orders-main">
+    <h2>Your Orders</h2>
+    <div id="ordersList" class="orders-list"></div>
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      updateCartCountUI();
+      renderOrdersPage();
+    });
+  </script>
+</body>
+</html>
